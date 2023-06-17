@@ -1,0 +1,38 @@
+[project]
+name = "Noneable"
+description = "Ensure None values are explicitly checked."
+readme = "README.md"
+authors = [{ name = "Skinner927", email = "1518323+Skinner927@users.noreply.github.com" }]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Typing :: Typed",
+]
+requires-python = ">=3.8"
+version = "0.1.0"
+
+[project.urls]
+"Homepage" = "https://github.com/skinner927/noneable"
+"Source Code" = "https://github.com/skinner927/noneable"
+"Issue Tracker" = "https://github.com/skinner927/noneable/issues/"
+
+[project.optional-dependencies]
+tests = ["pytest"]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.mypy]
+python_version = "3.8"
+files = ["src/noneable"]
+show_error_codes = true
+pretty = true
+strict = true
